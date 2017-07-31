@@ -1,4 +1,4 @@
-package com.emm0.testlm;
+package com.emm0.testlm.searcher.impl;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -26,6 +26,9 @@ public class FlightDictionary {
 	private static final int COLUMN_AIRLINE = 2;
 	private static final int COLUMN_BASE_PRICE = 3;
 	
+	/**
+	 * Map with the flights the key is origin.concat(destination)
+	 */
 	private Map<String, List<Flight>> flightMap = new HashMap<>();
 	
 	/**
@@ -83,7 +86,8 @@ public class FlightDictionary {
 	
 	public List<Flight> getFlights(String key){
 		
-		return flightMap.get(key);
+		//if null we return empty List
+		return flightMap.get(key) != null ? flightMap.get(key) : new ArrayList<Flight>();
 	}
 
 }
