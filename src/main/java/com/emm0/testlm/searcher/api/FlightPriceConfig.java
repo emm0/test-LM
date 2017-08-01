@@ -7,14 +7,29 @@ package com.emm0.testlm.searcher.api;
  */
 public class FlightPriceConfig {
 	
+	/**
+	 * Days to the departure property
+	 */
 	private int daysToTheDeparture;
 	
+	/**
+	 * Number of Adults property
+	 */
 	private int numAdults = 0;
 	
+	/**
+	 * Number of children property
+	 */
 	private int numChildren = 0;
 	
+	/**
+	 * Number of infants property
+	 */
 	private int numInfants = 0;
 	
+	/**
+	 * Origin and destination property (Concatenated)
+	 */
 	String originDestination;
 
 	/**

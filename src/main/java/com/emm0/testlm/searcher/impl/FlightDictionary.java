@@ -49,7 +49,8 @@ public class FlightDictionary {
 
                 // use comma as separator
                 String[] items = line.split(cvsSplitBy);
-
+                
+                //We read the values from the file and then create a flight and save it into flightMap
                 try{
                 	
                 	Flight flight = new Flight(items[COLUMN_ORIGIN], items[COLUMN_DESTINATION], items[COLUMN_AIRLINE], Double.valueOf(items[COLUMN_BASE_PRICE]));
@@ -84,6 +85,12 @@ public class FlightDictionary {
         }
 	}
 	
+	/**
+	 * Returns a list of flights given a origin+destination
+	 * Search Complexity: Constant
+	 * @param key origin+destination
+	 * @return a list of flights
+	 */
 	public List<Flight> getFlights(String key){
 		
 		//if null we return empty List

@@ -13,6 +13,11 @@ import com.emm0.testlm.model.SearcherResponse;
 import com.emm0.testlm.searcher.api.FlightPriceConfig;
 import com.emm0.testlm.searcher.api.FlightSearcher;
 
+/**
+ * Implementation for FlightSearcher interface
+ * @author emp
+ *
+ */
 public class FlightSearcherImpl implements FlightSearcher {
 	
 	private static final String NON_INFANT_ERROR = "Error: no fare available for infant";
@@ -61,6 +66,7 @@ public class FlightSearcherImpl implements FlightSearcher {
 				totalPrice = calculator.calculatePrice(config, f);
 				printableTotalPrice = df.format(totalPrice);
 			} catch (NonInfantPriceException e) {
+				//If NonInfantPriceException is thrown, we mark the result with NON_INFANT_ERROR
 				e.printStackTrace();
 				printableTotalPrice = NON_INFANT_ERROR;
 			}

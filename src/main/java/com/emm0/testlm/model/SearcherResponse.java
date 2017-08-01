@@ -1,11 +1,25 @@
 package com.emm0.testlm.model;
 
+/**
+ * This class contains the searcher's response
+ * @author emp
+ *
+ */
 public class SearcherResponse {
 	
+	/**
+	 * Airline property
+	 */
 	private String airline;
 	
+	/**
+	 * Total price property
+	 */
 	private Double totalPrice;
 	
+	/**
+	 * Printable total price property
+	 */
 	private String printableTotalPrice;
 
 	/**

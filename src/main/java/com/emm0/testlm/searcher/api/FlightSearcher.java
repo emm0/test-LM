@@ -13,8 +13,8 @@ public interface FlightSearcher {
 	
 	/**
 	 * Given a FlightPriceConfig search the flights and calculate the total price
-	 * @param config
-	 * @return
+	 * @param config Configuration for the search
+	 * @return A list of SearcherResponse
 	 */
 	List<SearcherResponse> search(FlightPriceConfig config);
 

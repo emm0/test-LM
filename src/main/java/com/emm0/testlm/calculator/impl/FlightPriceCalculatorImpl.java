@@ -1,6 +1,5 @@
 package com.emm0.testlm.calculator.impl;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -73,7 +72,9 @@ public class FlightPriceCalculatorImpl implements FlightPriceCalculator {
 		return price;
 	}
 	
-	
+	/**
+	 * We load the prices for infants
+	 */
 	private void loadInfantPriceMap(){
 		/*| IATA code | name             | infant price |
 		|-----------|------------------|--------------|
