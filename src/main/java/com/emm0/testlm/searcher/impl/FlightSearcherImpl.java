@@ -54,6 +54,7 @@ public class FlightSearcherImpl implements FlightSearcher {
 		
 		List<SearcherResponse> responseList = new ArrayList<>();
 		
+		//We calculate the total price for each flight
 		for (Flight f : flights){
 			SearcherResponse response = new SearcherResponse();
 			
